@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Wireless Sensor Network</title>
+<script src="js/jquery-3.2.0.min.js"></script>
+</head>
+<body>
+<p>Test</p>
+<div id="info"></div>
+<script>
+window.count = 0
+$(function(){
+  setInterval(getSensorInfo, 500);
+});
+
+function getSensorInfo(){
+  var url = '/query?count=' + count;
+  $.get(url).done(function(data){
+    result = JSON.parse(data);
+	if(result.data != "" && result.count > count){
+	  for(var i = 0; i < result.count-count; i++){
+	    $("#info").append("<p>"+result.data[i]+"</p>");
+	  }
+	  count = result.count;
+	}
+  });
+}
+</script>
+</body>
+</html>
