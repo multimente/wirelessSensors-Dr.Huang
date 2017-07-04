@@ -7,7 +7,7 @@
 鼠标  
 显示屏一个（要求有DVI接口或者HDMI接口） 
 显示屏连接线（因为树莓派3的显示屏接口是HDMI，所以根据显示屏，使用双hdmi或者hdmi转dvi，注意不能用hdmi转vga）  
-树莓派3 GPIO： 
+树莓派3 GPIO：  
 ![image](https://github.com/multimente/wirelessSensors-Dr.Huang/blob/master/gpio.jpg)  
 注意 GPIO 靠近外侧的是偶数，靠近内侧（近CPU的一侧）是奇数  
   
